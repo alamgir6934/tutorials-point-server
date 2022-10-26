@@ -1,26 +1,26 @@
 [
     {
         "id": "01",
-        "name": "Computer Introduction"
+        "name": "Introduction of computer sccience"
     },
     {
         "id": "02",
-        "name": "Use of science"
+        "name": "Machine learning"
     },
     {
         "id": "03",
-        "name": "Programming Knowledge"
+        "name": "Fundamental Programming"
     },
     {
         "id": "04",
-        "name": "Basic Programming"
+        "name": "Data stracture"
     },
     {
         "id": "05",
-        "name": "use of zero level"
+        "name": "Computer Network"
     },
     {
         "id": "06",
-        "name": "Use of A level"
+        "name": "Algoritham"
     }
 ]
