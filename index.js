@@ -6,6 +6,8 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 
 const categories = require('./data/Categories.json');
+const books = require('./data/Books.json');
+
 
 app.get('/', (req, res) => {
     res.send('Books api running')
@@ -13,7 +15,22 @@ app.get('/', (req, res) => {
 
 app.get('/books-categories', (req, res) => {
     res.send(categories)
+});
+
+app.get('/category/:id', (req, res) => {
+    const id = req.params.id;
+    const category_books = books.filter(b => b.category_id === id);
+    res.send(category_books)
 })
+
+app.get('/books/:id', (req, res) => {
+    const id = req.params.id;
+    const selectedBooks = books.find(b => b._id === id);
+    res.send(selectedBooks);
+
+});
+
+
 
 app.listen(port, () => {
     console.log('dragon news server running on port', port)
