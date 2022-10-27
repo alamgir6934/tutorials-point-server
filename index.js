@@ -5,8 +5,9 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 
-const categories = require('./data/Categories.json');
-const books = require('./data/Books.json');
+const categories = require('./data/categories.json');
+const books = require('./data/books.json');
+
 
 
 app.get('/', (req, res) => {
@@ -22,6 +23,10 @@ app.get('/category/:id', (req, res) => {
     const category_books = books.filter(b => b.category_id === id);
     res.send(category_books)
 })
+app.get('/books', (req, res) => {
+    res.send(books)
+})
+
 
 app.get('/books/:id', (req, res) => {
     const id = req.params.id;
